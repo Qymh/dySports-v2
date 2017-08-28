@@ -1,0 +1,148 @@
+.imgShowExpert {
+    height: h(559px);
+    width: 100%;
+    margin-top: h(80px);
+    position: relative;
+    font-size: 0.15rem;
+    @include displayBox();
+    @include box-pack(center);
+    @include box-align(center);
+    >img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: -100;
+    }
+    .text {
+        height: 2rem;
+        width: 4rem;
+        text-align: center;
+        margin-top: 1.5rem;
+        >div {
+            color: $white;
+            display: inline-block;
+        }
+        .first {
+            font-size: h(40px);
+        }
+        .second {
+            margin-top: h(44px);
+            font-size: h(24px);
+        }
+    }
+}
+
+.captionExpert {
+    height: h(220px);
+    width: 100%;
+    text-align: center;
+    line-height: h(220px);
+    font-size: h(36px);
+    font-weight: bold;
+    >span {
+        color: $thinGreen;
+    }
+}
+
+.steam {
+    font-size: 0.15rem;
+    width: 70%;
+    margin-left: 15%;
+    border-bottom: h(2px) solid #ddd;
+    padding-bottom: h(200px);
+    position: relative;
+    color: #000;    
+    .persen{
+        clear: both;
+        height: h(85px);
+        width: 100%;
+        position: relative;
+        margin-bottom: h(45px);
+        >*{
+            float: left;
+        }
+        .icon{
+            height: h(73px);
+            width: h(73px);
+            @include border-radius(50%);
+            background-color:$thinGreen;
+            line-height: 0.55053rem;
+            text-align: center;
+            margin-top: 0.05rem;
+            display: block;
+            >i{
+                vertical-align: middle;
+                font-size: h(40px);
+                color: $white;
+            }
+        }
+        .name{
+            margin-top: 0.1rem;
+            margin-left: w(60px);
+            font-weight: bold;
+            font-size: h(28px);
+        }
+        .introduce{
+            top: 0.45rem;
+            left: 0.95rem;
+            position: absolute;
+            color:$lighterGrey; 
+        }
+    }
+    .line{
+        height: 100%;
+        width: w(2px);
+        position: absolute;
+        background-color: $thinGreen;
+        top: 0.1rem ;
+        left: 0.27rem;
+        z-index: -100;
+    }
+}
+
+.contact{
+    height: h(533px);
+    width: 100%;
+    font-size: 0.15rem;
+    .contactBox{
+        height: h(301px);
+        width: w(916px);
+        margin: h(70px) auto;
+        position: relative;
+        .title{
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            font-size: h(40px);
+        }
+        .information{
+            position: absolute;
+            top: 1.05rem;
+            left: w(-70px);
+            height: h(200px);
+        }
+        .erweima{
+            position: absolute;
+            left: w(517px);
+            top: h(130px);
+            width: 5rem;
+            .chunk{
+                position: absolute;
+                >img{
+                    height: h(180px);
+                    width: h(180px);
+                }
+                >span{
+                    position: absolute;
+                    left: w(50px);
+                    bottom: -0.15rem;
+                }
+                &:nth-of-type(2){
+                    left: w(200px);
+                }
+            }
+        }
+    }
+}

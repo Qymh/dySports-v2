@@ -1,0 +1,224 @@
+$basePxToRem: 102px !default;
+$fontSize:0.15rem !default;
+
+
+@function w($px) {
+    @return $px / ($basePxToRem * 1.4) * 1rem
+}
+
+@function h($px) {
+    @return $px / ($basePxToRem * 1.4) * 1rem
+}
+
+@mixin box-shadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    -box-shadow: $shadow;
+}
+
+@mixin border-radius($border-radius) {
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    -o-border-radius: $border-radius;
+    -ms-border-radius: $border-radius;
+    border-radius: $border-radius;
+}
+
+@mixin box-flex($box-flex) {
+    -webkit-box-flex: $box-flex;
+    -moz-box-flex: $box-flex;
+    box-flex: $box-flex;
+}
+
+@mixin align-items($align-items) {
+    -webkit-align-items: $align-items;
+}
+
+@mixin animation($animation) {
+    -webkit-animation: $animation;
+    animation: $animation;
+}
+
+@mixin keyframes($keyframes) {
+    @-webkit-keyframes: $keyframes;
+    @-moz-keyframes: $keyframes;
+    @-o-keyframes: $keyframes;
+}
+
+@mixin displayBox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: box;
+    display: flex;
+    display: -webkit-flex;
+}
+
+@mixin box-pack($box-pack) {
+    -webkit-box-pack: $box-pack;
+    -moz-box-pack: $box-pack;
+    -ms-box-pack:$box-pack;
+    box-pack: $box-pack;
+    justify-content: $box-pack;
+}
+
+@mixin box-align($box-align) {
+    align-items: $box-align;
+    -webkit-box-align: $box-align;
+    -moz-box-align: $box-align;
+    -ms-box-align:$box-align;
+    box-align: $box-align;
+}
+
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -ms-transition: $transition;
+    transition: $transition;
+}
+
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -o-transform: $transform;
+    -ms-transform: $transform;
+    transform: $transform;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    &:link {
+        color: #000;
+    }
+    &:visited {
+        color: #000;
+    }
+}
+
+html {
+    font-size: 100px;
+    /*px换算成rem*/
+}
+
+@media(min-width:1440px) {
+    html {
+        font-size: 102px;
+    }
+}
+
+@media(min-width:1600px) {
+    html {
+        font-size: 117px;
+    }
+}
+
+@media(min-width:1680px) {
+    html {
+        font-size: 123.2px;
+    }
+}
+
+@media(min-width:1920px) {
+    html {
+        font-size: 879.375%;
+    }
+}
+
+@media(min-width:2560px) {
+    html {
+        font-size: 1168.75%;
+    }
+}
+
+@media(min-width:3440px) {
+    html {
+        font-size: 1575%;
+    }
+}
+
+@media(min-width:3840px) {
+    html {
+        font-size: 1760%;
+    }
+}
+
+.loading{
+  position: fixed;
+  z-index: 999999999;
+  left: 0;
+  top:0;
+  width: 100%;
+  height:100%;
+  background: rgba(256,256,256,0.8);
+  .loading-content{
+    position: relative;
+    width: 100%;
+    height:100%;
+  }
+}
+
+.spinner {
+  left: 50%;
+  top: 30%;
+  margin-left:-16px;
+  margin-top: -16px;
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+.cube1, .cube2 {
+  background-color: #82b64a;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  -webkit-animation: cubemove 1.8s infinite ease-in-out;
+  animation: cubemove 1.8s infinite ease-in-out;
+}
+.cube2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+@-webkit-keyframes cubemove {
+  25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }
+  50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }
+  75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
+  100% { -webkit-transform: rotate(-360deg) }
+}
+@keyframes cubemove {
+  25% {
+    transform: translateX(42px) rotate(-90deg) scale(0.5);
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+  } 50% {
+      transform: translateX(42px) translateY(42px) rotate(-179deg);
+      -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+    } 50.1% {
+        transform: translateX(42px) translateY(42px) rotate(-180deg);
+        -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+      } 75% {
+          transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+          -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+        } 100% {
+            transform: rotate(-360deg);
+            -webkit-transform: rotate(-360deg);
+          }
+}
+
+.resultBox{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -0.9rem;
+    margin-top: -0.15rem;
+    width: 1.8rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    font-size: 0.15rem;
+    color: #fff;
+    background-color: #82b64a;
+    text-align: center;
+}

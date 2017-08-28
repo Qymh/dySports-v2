@@ -1,0 +1,74 @@
+@import '../base/_public.scss';
+@import '../base/_color.scss';
+
+footer{
+    .joinUs{
+        height: h(111px);
+        width: 100%;
+        background-color: #1C1C1C;
+        line-height: h(111px);
+        font-size: 0.15rem;
+        position: relative;
+        .btn-join{
+            margin-left: w(363px);
+            height: h(48px);
+            width: w(258px);
+            line-height: h(48px);
+            text-align: center;
+            background-color: $thinGreen;
+            color: $white;
+            display: inline-block;
+            cursor: pointer;
+            >i{
+                font-size: 0.2rem;
+                vertical-align: sub;
+                margin-right: 0.05rem;
+            }
+            >a{
+                color: $white;
+                &:link{
+                    color: $white
+                }
+                &:visited{
+                    color: $white
+                }
+            }
+        }
+        .tel{
+            position: absolute;
+            left: 9.1rem;
+            top: 0.3rem;
+            height: h(43px);
+            width: w(306px);
+            line-height: h(43px);
+            text-align: center;
+            display: inline-block;
+            >i{
+                color: $thinGreen;
+                font-size: 0.25rem;
+                vertical-align: super;
+            }
+            >img{
+                width: w(200px);
+            }
+        }
+    }
+    .address{
+        height:h(88px);
+        line-height: h(38px);
+        font-size: 0.15rem;
+        background-color: #1C1C1C;
+        .company{
+            margin-top: h(20px);
+            color: $white;
+            margin-left: w(377px);
+            display: inline-block;
+        }
+        .add{
+            margin-top: h(20px);
+            color: $white;
+            margin-left: w(735px);
+            display: inline-block;
+        }
+    }
+}
