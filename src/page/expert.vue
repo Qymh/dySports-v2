@@ -43,7 +43,7 @@
                         <span>动跃健康</span>
                     </div>
                     <div class="chunk">
-                        <img src="../../static/images/erweima.jpg">
+                        <img src="../../static/images/erweima2.jpg">
                         <span>动跃体育</span>
                     </div>
                 </div>

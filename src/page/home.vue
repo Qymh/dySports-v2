@@ -2,7 +2,7 @@
     <div class="dySports">
         <!-- 大图展示 -->
         <div class="imgShowBox">
-            <img src="/static/images/test.jpg">
+            <img src="/static/images/banner.jpg">
             <h1 class="title">
                 每个孩子享受健康运动
             </h1>
