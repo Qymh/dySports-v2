@@ -5,7 +5,7 @@ export default Vue.extend({
     template:`
     <div class="topNav">
         <a href="#/" class="logo">
-            <img src="static/images/logo2.png">
+            <img src="static/images/logo3.png">
         </a>
         <nav class="nav">
             <ul>
@@ -63,22 +63,63 @@ export default Vue.extend({
     },
     mounted () {
         var that=this
-      setTimeout(function(){
-        that.weixinStatus=true
-      },500)  
+        setTimeout(function(){
+            that.weixinStatus=true
+        },500)  
     },
     methods: {
         showErweima(){
             var $weixinBox=$('.weixinBox')
+
+            // 显示微信box
             $weixinBox.stop().show().animate({
                 opacity:1
             })
+
+            var url=window.location.hash
+
+            if(url=='#/'){
+                // 改变导航样式
+                $('.topNav').css({
+                    backgroundColor:'#fff'
+                })
+                $('.logo img').attr('src','static/images/logo2.png')
+
+                $('.nav a').css({
+                    color:'#000'
+                })
+
+                $('.weixin span').css({
+                    color:'#000'
+                })
+            }
         },
         hideErweima(){
             var $weixinBox=$('.weixinBox')
+
+            // 隐藏微信box
             $weixinBox.stop().hide().animate({
                 opacity:0
             })
+
+            var url=window.location.hash
+
+            if(url=="#/"){
+
+                // 导航样式
+                $('.topNav').css({
+                    backgroundColor:''
+                })
+                $('.logo img').attr('src','static/images/logo3.png')
+
+                $('.nav a').css({
+                    color:'#fff'
+                })
+
+                $('.weixin span').css({
+                    color:'#fff'
+                })
+            }
         }
     }
 })

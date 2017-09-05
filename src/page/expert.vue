@@ -96,6 +96,21 @@
                     $lis.eq(2).addClass('focus')
                     break;
             }
+
+            // 改变导航样式
+            $('.nav a').css({
+                color:'#000'
+            })
+
+            $('.topNav').css({
+                backgroundColor:'#fff'
+            })
+
+            $('.weixin span').css({
+                color:'#000'
+            })
+
+            $('.logo img').attr('src','static/images/logo2.png')
         },
         beforeRouteEnter: (to, from, next) => {
             var li=$('.nav ul li')

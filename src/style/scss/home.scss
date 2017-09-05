@@ -1,9 +1,11 @@
 .imgShowBox {
-    height: h(759px);
     width: 100%;
     font-size: $fontSize;
     position: relative;
     text-align: center;
+    background: url('../../static/images/later.jpg') 0 0 no-repeat;
+    background-size: 100%;
+    -webkit-background-size: 100%;
     >img {
         height: 100%;
         width: 100%;
@@ -12,33 +14,40 @@
         left: 0;
         top: 0;
     }
+    .details{
+        position: absolute;
+        font-size: h(20px);
+        left: 19%;
+        color: $white;
+        top: h(428px);
+    }
     h1 {
         position: absolute;
-        width: w(691px);
+        width: w(800px);
         height: h(61px);
         text-align: center;
-        top: h(268px);
-        left: 50%;
-        margin-left: -4.8rem;
+        top: h(328px);
+        left: 15%;
         z-index: 100;
         color: $white;
-        font-size: h(60px);
+        font-weight: bold;
+        font-size: h(65px);
     }
     >a {
         display: block;
         position: absolute;
-        height: h(48px);
-        width: w(258px);
-        line-height: h(48px);
+        height: h(60px);
+        width: w(358px);
+        line-height: h(60px);
         text-align: center;
-        top: h(383px);
-        left: 50%;
+        top: h(480px);
+        left: 19%;
         cursor: pointer;
         z-index: 0;
-        font-size: h(20px);
-        margin-left: -4.4rem;
+        font-size: h(22px);
         background-color: $thinGreen;
         color: $white !important;
+        @include border-radius(h(60px));
     }
 }
 

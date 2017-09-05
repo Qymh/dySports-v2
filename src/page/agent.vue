@@ -250,6 +250,21 @@
             }
 
             this.Alert=Alert
+
+            // 改变导航样式
+            $('.nav a').css({
+                color:'#000'
+            })
+
+            $('.topNav').css({
+                backgroundColor:'#fff'
+            })
+
+            $('.weixin span').css({
+                color:'#000'
+            })
+
+            $('.logo img').attr('src','static/images/logo2.png')
             /*
             var that=this
             setTimeout(function(){

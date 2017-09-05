@@ -2,10 +2,12 @@
     <div class="dySports">
         <!-- 大图展示 -->
         <div class="imgShowBox">
-            <img src="/static/images/banner.jpg">
             <h1 class="title">
                 每个孩子享受健康运动
             </h1>
+            <p class="details">
+                免安装 | 云储存 | 易操作 | 舒适的体验 | 丰富的功能
+            </p>
             <a @click="toUse" href="javascript:void(0)">
                 立即使用
             </a>     
@@ -311,7 +313,6 @@
             }
         },
         mounted () {
-
             // 滚动事件
             if(document.addEventListener){
                 document.addEventListener('DOMMouseScroll',this.scroll,false);
@@ -348,7 +349,8 @@
             var topNavHeight=$('.topNav').height()
 
             $('.imgShowBox').css({
-                height:baseHeight-topNavHeight
+                height:baseHeight,
+                marginTop:-topNavHeight
             })
 
             $('.homeInformation').css({
@@ -359,6 +361,21 @@
             
             // 去除尾部
             $('footer').remove()
+
+            // 改变导航样式
+            $('.nav a').css({
+                color:'#fff'
+            })
+
+            $('.topNav').css({
+                backgroundColor:''
+            })
+
+            $('.weixin span').css({
+                color:'#fff'
+            })
+
+            $('.logo img').attr('src','static/images/logo3.png')
         },
         components:{
             leftSlide:leftSlide,
@@ -372,7 +389,9 @@
                 var baseHeight=document.documentElement.clientHeight||
                 document.body.clientHeight
                 var $sib=$(e.target).siblings().removeClass('focus')
-                $(e.target).addClass('focus')
+                setTimeout(()=>{
+                    $(e.target).addClass('focus')
+                })
                 resume.animate({
                     top:-index*baseHeight
                 })
@@ -550,13 +569,17 @@
                                 var index=Math.abs(top/baseHeight)
                                 if(index>=0){
                                     $lis.removeClass('focus')
-                                    $lis.eq(index).addClass('focus')
+                                    setTimeout(()=>{
+                                        $lis.eq(index).addClass('focus')
+                                    })
                                 }
                             }else{
                                 var index=Math.abs(top/baseHeight)-2
                                 if(index>=0){
                                     $lis.removeClass('focus')
-                                    $lis.eq(index).addClass('focus')
+                                   setTimeout(()=>{
+                                        $lis.eq(index).addClass('focus')
+                                    })
                                 }
                             }
                         }else if(e.detail){
@@ -564,13 +587,17 @@
                                 var index=Math.abs(top/baseHeight)
                                 if(index>=0){
                                     $lis.removeClass('focus')
-                                    $lis.eq(index).addClass('focus')
+                                    setTimeout(()=>{
+                                        $lis.eq(index).addClass('focus')
+                                    })
                                 }
                             }else{
                                 var index=Math.abs(top/baseHeight)-2
                                 if(index>=0){
                                     $lis.removeClass('focus')
-                                    $lis.eq(index).addClass('focus')
+                                    setTimeout(()=>{
+                                        $lis.eq(index).addClass('focus')
+                                    })
                                 }
                             }
                         }
@@ -601,6 +628,7 @@
             $('body').css({
                 overflow:'hidden'
             })
+
             next()
         },
         beforeDestroy () {
